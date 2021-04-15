@@ -8,7 +8,7 @@ The goal of this repository is to present the structure of a multi-module Maven 
 
 This repository consists of a parent Maven project and one sub-project (modules).
 
-1. [Histogram Generator](https://github.com/katerinadimatou/repo/tree/development/gradeshistogram)- Creates a histogram of frequencies from a given file of grades
+1. [Histogram Generator](https://github.com/katerinadimatou/Applied-Software-Engineering/tree/development/gradeshistogram)- Creates a histogram of frequencies from a given file of grades
 
 Execute the following command in the repository root directory in order to build all modules (in this case the module "Histogram Generator").
 
@@ -16,11 +16,11 @@ Execute the following command in the repository root directory in order to build
 mvn package
 ```
 
-This command generates a seperate jar file in each module's corresponding target (module/target) directory (in this case Histogram Generator's target directory).
+This command generates a seperate jar file in each module's corresponding target (`module/target`) directory (in this case Histogram Generator's target directory).
 
 ### Histogram Generator 
 
-This module requires one runtime dependency which is packaged in the main jar (fat-jar). To create a fat-jar you need to use the maven-assembly-plugin plugin and also define the class that is the main entry point of the system (the class that contains the main method).
+This module requires one runtime dependency which is packaged in the main jar (fat-jar). To create a fat-jar you need to use the `maven-assembly-plugin` plugin and also define the class that is the main entry point of the system (the class that contains the main method).
 
 ```no-highlight
 <plugin>
