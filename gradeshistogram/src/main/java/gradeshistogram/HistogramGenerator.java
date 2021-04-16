@@ -122,7 +122,7 @@ public class HistogramGenerator {
 		 * Initialize a frame for visualizing the chart and attach the previously
 		 * created chart.
 		 */
-		ChartFrame frame = new ChartFrame("First", chart);
+		ChartFrame frame = new ChartFrame("Histogram from file", chart);
 		frame.pack();
 		// makes the previously created frame visible
 		frame.setVisible(true);
