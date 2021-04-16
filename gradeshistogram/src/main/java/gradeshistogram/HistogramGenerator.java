@@ -3,12 +3,15 @@ package gradeshistogram;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartFrame;
 import org.jfree.chart.JFreeChart;
-import org.jfree.data.statistics.HistogramDataset;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.xy.XYSeries;
+import org.jfree.data.xy.XYSeriesCollection;
 
 public class HistogramGenerator {
 
@@ -67,11 +70,16 @@ public class HistogramGenerator {
 
 	public void generateChart(int[] dataValues) {
 		/*
-		 * The XYSeriesCollection object is a set XYSeries series (dataset) that can be
-		 * visualized in the same chart
+		 * The XYSeriesCollection object is a set XYSeries series (dataset) that
+		 * can be visualized in the same chart
 		 */
-		HistogramDataset dataset = new HistogramDataset();
-
+		XYSeriesCollection dataset = new XYSeriesCollection();
+		
+		/*
+		 * The XYSeries that are loaded in the dataset. There might be many
+		 * series in one dataset.
+		 */
+		XYSeries data = new XYSeries("random values");
 		/*
 		 * Counting the different values in the array
 		 */
@@ -81,20 +89,34 @@ public class HistogramGenerator {
 				diffNum.add(dataValues[i]);
 			}
 		}
-		int num = diffNum.size();
-
-		// converting the integer array to a double one
-		double[] values = new double[dataValues.length];
-		for (int i = 0; i < dataValues.length; i++) {
-			values[i] = dataValues[i];
+		
+		//Sorting the ArrayList
+		Collections.sort(diffNum);
+			
+		/*
+		 * Counting the frequency of every value and adding series to the dataset 
+		 */
+		for (int j=0; j< diffNum.size(); j++) {
+			int counter = 0;
+			for (int w=0; w< dataValues.length; w++){
+				if (diffNum.get(j)==dataValues[w]) {
+					counter++;
+					
+				}
+			}
+			data.add(j, counter);
 		}
 
-		// adding data to dataset
-		dataset.addSeries("key", values, num);
+		// add the series to the dataset
+		dataset.addSeries(data);
+		
+		boolean legend = false; // do not visualize a legend
+		boolean tooltips = false; // do not visualize tooltips
+		boolean urls = false; // do not visualize urls
 
 		// Declare and initialize a createXYLineChart JFreeChart
-		JFreeChart chart = ChartFactory.createHistogram("Grades Histogram", "Grades", "Frequency", dataset);
-
+				JFreeChart chart = ChartFactory.createXYLineChart("Grades Histogram", "Grades", "Frequency", dataset,
+						PlotOrientation.VERTICAL, legend, tooltips, urls);
 		/*
 		 * Initialize a frame for visualizing the chart and attach the previously
 		 * created chart.
