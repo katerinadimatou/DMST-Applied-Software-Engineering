@@ -104,7 +104,8 @@ public class HistogramGenerator {
 					
 				}
 			}
-			data.add(j, counter);
+			int num = diffNum.get(j);
+			data.add(num, counter);
 		}
 
 		// add the series to the dataset
