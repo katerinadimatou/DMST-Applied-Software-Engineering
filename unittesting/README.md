@@ -11,7 +11,7 @@ This is a Java project that is dedicated to a simple demonstration for Unit Test
     	<groupId>junit</groupId>
     	<artifactId>junit</artifactId>
     	<version>4.12</version>
-   		<scope>test</scope>
+   	<scope>test</scope>
 	</dependency>
 ```
 
