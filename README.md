@@ -56,6 +56,12 @@ java -jar gradeshistogram/target/gradeshistogram-0.0.1-SNAPSHOT-jar-with-depende
 
 Note that the gradeshistogram-0.0.1-SNAPSHOT.jar is not executable.
 
+### Unit Testing 
+
+Information about the purpose and usage of the module Unit Testing are specified in its [individual README.md](https://github.com/katerinadimatou/Applied-Software-Engineering/blob/development/unittesting/README.md) file
+
+
+
 ## How to 
 1. [Set up Maven in Windows](https://mkyong.com/maven/how-to-install-maven-in-windows/)
 2. Set up Maven in Linux: Execute `sudo apt update && sudo apt install maven` in terminal
