@@ -1,5 +1,7 @@
 # Build Automation Tools- ASE
 
+[![Build Status](https://travis-ci.com/katerinadimatou/Applied-Software-Engineering.svg?token=3uYynQRzsSnj3RgFsvxR&branch=main)](https://travis-ci.com/katerinadimatou/Applied-Software-Engineering)
+
 This repository is dedicated to a simple demonstration of the build automation tools (i.e.,Maven) for the needs of the course "Software Engineering in Practice" offered by the [Department of Management Science and Technology](https://www.aueb.gr/el/content/department-management-science-and-technology) of the [Athens University of Economics and Business](https://www.aueb.gr/).
 
 The goal of this repository is to present the structure of a multi-module Maven project!
