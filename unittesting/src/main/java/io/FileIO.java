@@ -12,9 +12,6 @@ import java.util.List;
 * The FileIO provides simple file input/output operations
 * that serve as hands-on practice on Unit Testing.
 *
-* @author  agkortzis
-* @version 1.0
-* @since   2020-04-06 
 */
 public class FileIO {
 	
@@ -38,8 +35,13 @@ public class FileIO {
 			reader = new BufferedReader(new FileReader(file));
 			String line = null;
 			while ((line = reader.readLine()) != null) {
-				int number = Integer.parseInt(line);
-				numbersList.add(number);
+				try {
+					int number = Integer.parseInt(line);
+					numbersList.add(number);
+				} catch (NumberFormatException e) {
+					line = reader.readLine();
+				}
+				
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

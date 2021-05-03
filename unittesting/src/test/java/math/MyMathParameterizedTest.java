@@ -44,7 +44,7 @@ public class MyMathParameterizedTest {
 	
 	/*
 	 * A unit test that is executed for each pair of 
-	 * parameters. 
+	 * parameters to test the function of the factorial methods 
 	 */
 	
 	@Test
