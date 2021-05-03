@@ -37,23 +37,23 @@ This projects utilizes TravisCI services in other to test and build the applicat
 ## Jacoco Plugin
 ```no-highlight
 <build>
-		<plugins>
-			<!-- required for code coverage reporting -->
-			<plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.3</version>
-				<executions>
-					<execution>
-						<id>prepare-agent</id>
-						<goals>
-							<goal>prepare-agent</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			</plugins>
-	</build>
+	<plugins>
+		<!-- required for code coverage reporting -->
+		<plugin>
+			<groupId>org.jacoco</groupId>
+			<artifactId>jacoco-maven-plugin</artifactId>
+			<version>0.8.3</version>
+			<executions>
+				<execution>
+					<id>prepare-agent</id>
+					<goals>
+						<goal>prepare-agent</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>
+	</plugins>
+</build>
 ```
 
 
