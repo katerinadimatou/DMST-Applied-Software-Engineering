@@ -20,7 +20,10 @@ mvn package
 
 This command generates a seperate jar file in each module's corresponding target (`module/target`) directory (in this case Histogram Generator's target directory).
 
-### Histogram Generator 
+2. [Unit Testing](https://github.com/katerinadimatou/Applied-Software-Engineering/tree/development/unittesting)
+
+
+## Histogram Generator 
 
 This module requires one runtime dependency which is packaged in the main jar (fat-jar). To create a fat-jar you need to use the `maven-assembly-plugin` plugin and also define the class that is the main entry point of the system (the class that contains the main method).
 
@@ -58,7 +61,8 @@ java -jar gradeshistogram/target/gradeshistogram-0.0.1-SNAPSHOT-jar-with-depende
 
 Note that the gradeshistogram-0.0.1-SNAPSHOT.jar is not executable.
 
-### Unit Testing 
+
+## Unit Testing 
 
 Information about the purpose and usage of the module Unit Testing are specified in its [individual README.md](https://github.com/katerinadimatou/Applied-Software-Engineering/blob/development/unittesting/README.md) file
 
