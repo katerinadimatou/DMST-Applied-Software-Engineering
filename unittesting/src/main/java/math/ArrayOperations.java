@@ -1,9 +1,18 @@
 package math;
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 import io.FileIO;
+
+/**
+ * Reads the numbers in a file 
+ * @param object of FileIO class
+ * @param String filepath
+ * @param object of MyMath class
+ * @return an array containing only the prime numbers
+ */
 
 public class ArrayOperations {
 	

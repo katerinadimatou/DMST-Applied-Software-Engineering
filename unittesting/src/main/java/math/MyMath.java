@@ -1,6 +1,13 @@
 package math;
 
 public class MyMath {
+	
+	/**
+	 * Computes the factorial of an integer 
+	 * @param n the integer that we want to calculate its factorial
+	 * @return the factorial of the integer n 
+	 * @exception IllegalArgumentException if n is smaller that zero or higher than twelve
+	 */
 
 	public int factorial(int n) {
 		if (n < 0 || n > 12) {
@@ -11,6 +18,13 @@ public class MyMath {
 		else
 			return (n * factorial(n - 1));
 	}
+	
+	/**
+	 * Checks whether an integer number is prime or not
+	 * @param n the integer that we want to check if it is prime
+	 * @return true is the number is prime and false if the number is not prime
+	 * @exception IllegalArgumentException if n is smaller than two
+	 */
 
 	public boolean isPrime(int n) {
 		if (n < 2) {
