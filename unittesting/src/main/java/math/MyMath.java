@@ -11,7 +11,7 @@ public class MyMath {
 
 	public int factorial(int n) {
 		if (n < 0 || n > 12) {
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("Input number should be higher than zero and smaller than twelve");
 		}
 		if (n == 0)
 			return 1;
@@ -28,7 +28,7 @@ public class MyMath {
 
 	public boolean isPrime(int n) {
 		if (n < 2) {
-			throw new IllegalArgumentException();
+			throw new IllegalArgumentException("Input number should be higher than two");
 		}
 		boolean isItPrime = true;
 		for (int i = 2; i <= n / 2; i++) {

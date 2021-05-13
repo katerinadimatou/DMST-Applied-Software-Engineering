@@ -37,6 +37,7 @@ public class FileIOTest {
 	@Test
 	public void test_nonexistent_file_exception() {
 		thrown.expect(IllegalArgumentException.class);
+		thrown.expectMessage("Input file does not exist");
 		String filepath = resourcesPath.concat("names.txt");
 		int[] result = file.readFile(filepath);
 		
@@ -54,6 +55,7 @@ public class FileIOTest {
 	@Test
 	public void test_empty_file_exception() {
 		thr.expect(IllegalArgumentException.class);
+		thr.expectMessage("Given file is empty");
 		String filepath = resourcesPath.concat("emptynums.txt");
 		int[] result = file.readFile(filepath);
 		
