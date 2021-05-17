@@ -1,5 +1,7 @@
 # Build Automation Tools- ASE
 
+[![Build Status](https://travis-ci.com/katerinadimatou/Applied-Software-Engineering.svg?token=3uYynQRzsSnj3RgFsvxR&branch=main)](https://travis-ci.com/katerinadimatou/Applied-Software-Engineering)
+
 This repository is dedicated to a simple demonstration of the build automation tools (i.e.,Maven) for the needs of the course "Software Engineering in Practice" offered by the [Department of Management Science and Technology](https://www.aueb.gr/el/content/department-management-science-and-technology) of the [Athens University of Economics and Business](https://www.aueb.gr/).
 
 The goal of this repository is to present the structure of a multi-module Maven project!
@@ -18,7 +20,10 @@ mvn package
 
 This command generates a seperate jar file in each module's corresponding target (`module/target`) directory (in this case Histogram Generator's target directory).
 
-### Histogram Generator 
+2. [Unit Testing](https://github.com/katerinadimatou/Applied-Software-Engineering/tree/development/unittesting)
+
+
+## Histogram Generator 
 
 This module requires one runtime dependency which is packaged in the main jar (fat-jar). To create a fat-jar you need to use the `maven-assembly-plugin` plugin and also define the class that is the main entry point of the system (the class that contains the main method).
 
@@ -55,6 +60,13 @@ java -jar gradeshistogram/target/gradeshistogram-0.0.1-SNAPSHOT-jar-with-depende
 ```
 
 Note that the gradeshistogram-0.0.1-SNAPSHOT.jar is not executable.
+
+
+## Unit Testing 
+
+Information about the purpose and usage of the module Unit Testing are specified in its [individual README.md](https://github.com/katerinadimatou/Applied-Software-Engineering/blob/development/unittesting/README.md) file
+
+
 
 ## How to 
 1. [Set up Maven in Windows](https://mkyong.com/maven/how-to-install-maven-in-windows/)
